@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -10,16 +10,17 @@ export default {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      // { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=1024' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  router: {
-    base: '/donishop/'
-  },
+  // router: {
+  //   base: '/donishop/'
+  // },
   /*
   ** Customize the progress-bar color
   */
@@ -32,7 +33,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/icons.js', ssr: false }],
+  plugins: [{ src: '~/plugins/icons.js' }],
   /*
   ** Nuxt.js dev-modules
   */
@@ -59,7 +60,7 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/variables.scss', '~/assets/global.scss'],
     theme: {
       // dark: true,
       themes: {
