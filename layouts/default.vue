@@ -17,8 +17,8 @@
             Мои заказы
             <v-icon color="primary" class="ml-2">fas fa-shopping-bag</v-icon>
           </nuxt-link>
-          <nuxt-link to="/profile" class="ml-5">
-            Войти
+          <nuxt-link to="/login" class="ml-5">
+            Tore
             <v-icon color="primary" class="ml-2">fas fa-user-circle</v-icon>
           </nuxt-link>
         </v-toolbar>
@@ -65,6 +65,8 @@ export default {
 <style lang="scss" scoped>
 .theme--light.v-application {
   background: #f2f2f2;
+  // background: transparent;
+  // z-index: -2;
 }
 a {
   text-decoration: none;

@@ -175,9 +175,6 @@ export default {
     }
   },
   methods: {
-  },
-  mounted () {
-    console.log('tr')
   }
 }
 </script>
