@@ -83,7 +83,14 @@
     <h2 class="mt-7 font-weight-bold">Результат поиска</h2>
     <h4 class="font-weight-light">Всего результатов: 10</h4>
     <v-row>
-      <v-col v-for="item in searchResults" :key="item.id" lg="3" md="4" sm="6">
+      <v-col
+        @click="catalog"
+        v-for="item in searchResults"
+        :key="item.id"
+        lg="3"
+        md="4"
+        sm="6"
+      >
         <v-card flat tile>
           <v-img height="220" class="grey lighten-2"></v-img>
           <div class="d-flex flex-column pa-5">
@@ -175,6 +182,9 @@ export default {
     }
   },
   methods: {
+    catalog () {
+      this.$router.push('catalog/id')
+    }
   }
 }
 </script>
